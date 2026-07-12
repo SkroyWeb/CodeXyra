@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import AssetCard from "@/components/AssetCard";
 import { assets } from "@/data/assets";
+import Link from "next/link";
 
 export default function Assets() {
   return (
@@ -23,9 +24,13 @@ export default function Assets() {
               </p>
             </div>
 
-            <button className="rounded-lg bg-cyan-500 px-5 py-3 font-semibold text-white transition hover:bg-cyan-600">
-              Add Asset
-            </button>
+            
+            <Link
+  href="/assets/new"
+  className="rounded-lg bg-cyan-500 px-5 py-3 font-semibold text-white hover:bg-cyan-600"
+>
+  Add Asset
+</Link>
           </div>
 
           <div className="mt-8 flex gap-4">
